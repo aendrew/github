@@ -85,7 +85,7 @@
     "minami": "^1.1.1",
     "mocha": "^3.1.2",
     "must": "^0.13.1",
-    "tsd-jsdoc": "^1.0.1",
+    "tsd-jsdoc": "2.0.0-beta.3",
     "nock": "^9.0.2",
     "nyc": "9.0.1",
     "vinyl-buffer": "^1.0.0",
