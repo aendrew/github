@@ -11,93 +11,93 @@ declare class Gist {
     * Fetch a gist.
     * @see https://developer.github.com/v3/gists/#get-a-single-gist
     * @param {Requestable.callback} [cb] - will receive the gist
-    * @return {axios.Promise} - the Promise for the http request
+    * @return {Promise} - the Promise for the http request
     */
-   read(cb?: Requestable.callback): axios.Promise;
+   read(cb?: Requestable.callback): Promise;
 
    /**
     * Create a new gist.
     * @see https://developer.github.com/v3/gists/#create-a-gist
     * @param {Object} gist - the data for the new gist
     * @param {Requestable.callback} [cb] - will receive the new gist upon creation
-    * @return {axios.Promise} - the Promise for the http request
+    * @return {Promise} - the Promise for the http request
     */
-   create(gist: Object, cb?: Requestable.callback): axios.Promise;
+   create(gist: Object, cb?: Requestable.callback): Promise;
 
    /**
     * Delete a gist.
     * @see https://developer.github.com/v3/gists/#delete-a-gist
     * @param {Requestable.callback} [cb] - will receive true if the request succeeds
-    * @return {axios.Promise} - the Promise for the http request
+    * @return {Promise} - the Promise for the http request
     */
-   delete(cb?: Requestable.callback): axios.Promise;
+   delete(cb?: Requestable.callback): Promise;
 
    /**
     * Fork a gist.
     * @see https://developer.github.com/v3/gists/#fork-a-gist
     * @param {Requestable.callback} [cb] - the function that will receive the gist
-    * @return {axios.Promise} - the Promise for the http request
+    * @return {Promise} - the Promise for the http request
     */
-   fork(cb?: Requestable.callback): axios.Promise;
+   fork(cb?: Requestable.callback): Promise;
 
    /**
     * Update a gist.
     * @see https://developer.github.com/v3/gists/#edit-a-gist
     * @param {Object} gist - the new data for the gist
     * @param {Requestable.callback} [cb] - the function that receives the API result
-    * @return {axios.Promise} - the Promise for the http request
+    * @return {Promise} - the Promise for the http request
     */
-   update(gist: Object, cb?: Requestable.callback): axios.Promise;
+   update(gist: Object, cb?: Requestable.callback): Promise;
 
    /**
     * Star a gist.
     * @see https://developer.github.com/v3/gists/#star-a-gist
     * @param {Requestable.callback} [cb] - will receive true if the request is successful
-    * @return {axios.Promise} - the Promise for the http request
+    * @return {Promise} - the Promise for the http request
     */
-   star(cb?: Requestable.callback): axios.Promise;
+   star(cb?: Requestable.callback): Promise;
 
    /**
     * Unstar a gist.
     * @see https://developer.github.com/v3/gists/#unstar-a-gist
     * @param {Requestable.callback} [cb] - will receive true if the request is successful
-    * @return {axios.Promise} - the Promise for the http request
+    * @return {Promise} - the Promise for the http request
     */
-   unstar(cb?: Requestable.callback): axios.Promise;
+   unstar(cb?: Requestable.callback): Promise;
 
    /**
     * Check if a gist is starred by the user.
     * @see https://developer.github.com/v3/gists/#check-if-a-gist-is-starred
     * @param {Requestable.callback} [cb] - will receive true if the gist is starred and false if the gist is not starred
-    * @return {axios.Promise} - the Promise for the http request
+    * @return {Promise} - the Promise for the http request
     */
-   isStarred(cb?: Requestable.callback): axios.Promise;
+   isStarred(cb?: Requestable.callback): Promise;
 
    /**
     * List the gist's comments
     * @see https://developer.github.com/v3/gists/comments/#list-comments-on-a-gist
     * @param {Requestable.callback} [cb] - will receive the array of comments
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listComments(cb?: Requestable.callback): axios.Promise;
+   listComments(cb?: Requestable.callback): Promise;
 
    /**
     * Fetch one of the gist's comments
     * @see https://developer.github.com/v3/gists/comments/#get-a-single-comment
     * @param {number} comment - the id of the comment
     * @param {Requestable.callback} [cb] - will receive the comment
-    * @return {axios.Promise} - the Promise for the http request
+    * @return {Promise} - the Promise for the http request
     */
-   getComment(comment: number, cb?: Requestable.callback): axios.Promise;
+   getComment(comment: number, cb?: Requestable.callback): Promise;
 
    /**
     * Comment on a gist
     * @see https://developer.github.com/v3/gists/comments/#create-a-comment
     * @param {string} comment - the comment to add
     * @param {Requestable.callback} [cb] - the function that receives the API result
-    * @return {axios.Promise} - the Promise for the http request
+    * @return {Promise} - the Promise for the http request
     */
-   createComment(comment: string, cb?: Requestable.callback): axios.Promise;
+   createComment(comment: string, cb?: Requestable.callback): Promise;
 
    /**
     * Edit a comment on the gist
@@ -105,18 +105,18 @@ declare class Gist {
     * @param {number} comment - the id of the comment
     * @param {string} body - the new comment
     * @param {Requestable.callback} [cb] - will receive the modified comment
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   editComment(comment: number, body: string, cb?: Requestable.callback): axios.Promise;
+   editComment(comment: number, body: string, cb?: Requestable.callback): Promise;
 
    /**
     * Delete a comment on the gist.
     * @see https://developer.github.com/v3/gists/comments/#delete-a-comment
     * @param {number} comment - the id of the comment
     * @param {Requestable.callback} [cb] - will receive true if the request succeeds
-    * @return {axios.Promise} - the Promise for the http request
+    * @return {Promise} - the Promise for the http request
     */
-   deleteComment(comment: number, cb?: Requestable.callback): axios.Promise;
+   deleteComment(comment: number, cb?: Requestable.callback): Promise;
 
 }
 
@@ -217,45 +217,45 @@ declare class Issue {
     * @see https://developer.github.com/v3/issues/#create-an-issue
     * @param {Object} issueData - the issue to create
     * @param {Requestable.callback} [cb] - will receive the created issue
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createIssue(issueData: Object, cb?: Requestable.callback): axios.Promise;
+   createIssue(issueData: Object, cb?: Requestable.callback): Promise;
 
    /**
     * List the issues for the repository
     * @see https://developer.github.com/v3/issues/#list-issues-for-a-repository
     * @param {Object} options - filtering options
     * @param {Requestable.callback} [cb] - will receive the array of issues
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listIssues(options: Object, cb?: Requestable.callback): axios.Promise;
+   listIssues(options: Object, cb?: Requestable.callback): Promise;
 
    /**
     * List the events for an issue
     * @see https://developer.github.com/v3/issues/events/#list-events-for-an-issue
     * @param {number} issue - the issue to get events for
     * @param {Requestable.callback} [cb] - will receive the list of events
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listIssueEvents(issue: number, cb?: Requestable.callback): axios.Promise;
+   listIssueEvents(issue: number, cb?: Requestable.callback): Promise;
 
    /**
     * List comments on an issue
     * @see https://developer.github.com/v3/issues/comments/#list-comments-on-an-issue
     * @param {number} issue - the id of the issue to get comments from
     * @param {Requestable.callback} [cb] - will receive the comments
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listIssueComments(issue: number, cb?: Requestable.callback): axios.Promise;
+   listIssueComments(issue: number, cb?: Requestable.callback): Promise;
 
    /**
     * Get a single comment on an issue
     * @see https://developer.github.com/v3/issues/comments/#get-a-single-comment
     * @param {number} id - the comment id to get
     * @param {Requestable.callback} [cb] - will receive the comment
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getIssueComment(id: number, cb?: Requestable.callback): axios.Promise;
+   getIssueComment(id: number, cb?: Requestable.callback): Promise;
 
    /**
     * Comment on an issue
@@ -263,9 +263,9 @@ declare class Issue {
     * @param {number} issue - the id of the issue to comment on
     * @param {string} comment - the comment to add
     * @param {Requestable.callback} [cb] - will receive the created comment
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createIssueComment(issue: number, comment: string, cb?: Requestable.callback): axios.Promise;
+   createIssueComment(issue: number, comment: string, cb?: Requestable.callback): Promise;
 
    /**
     * Edit a comment on an issue
@@ -273,18 +273,18 @@ declare class Issue {
     * @param {number} id - the comment id to edit
     * @param {string} comment - the comment to edit
     * @param {Requestable.callback} [cb] - will receive the edited comment
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   editIssueComment(id: number, comment: string, cb?: Requestable.callback): axios.Promise;
+   editIssueComment(id: number, comment: string, cb?: Requestable.callback): Promise;
 
    /**
     * Delete a comment on an issue
     * @see https://developer.github.com/v3/issues/comments/#delete-a-comment
     * @param {number} id - the comment id to delete
     * @param {Requestable.callback} [cb] - will receive true if the request is successful
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   deleteIssueComment(id: number, cb?: Requestable.callback): axios.Promise;
+   deleteIssueComment(id: number, cb?: Requestable.callback): Promise;
 
    /**
     * Edit an issue
@@ -292,45 +292,45 @@ declare class Issue {
     * @param {number} issue - the issue number to edit
     * @param {Object} issueData - the new issue data
     * @param {Requestable.callback} [cb] - will receive the modified issue
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   editIssue(issue: number, issueData: Object, cb?: Requestable.callback): axios.Promise;
+   editIssue(issue: number, issueData: Object, cb?: Requestable.callback): Promise;
 
    /**
     * Get a particular issue
     * @see https://developer.github.com/v3/issues/#get-a-single-issue
     * @param {number} issue - the issue number to fetch
     * @param {Requestable.callback} [cb] - will receive the issue
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getIssue(issue: number, cb?: Requestable.callback): axios.Promise;
+   getIssue(issue: number, cb?: Requestable.callback): Promise;
 
    /**
     * List the milestones for the repository
     * @see https://developer.github.com/v3/issues/milestones/#list-milestones-for-a-repository
     * @param {Object} options - filtering options
     * @param {Requestable.callback} [cb] - will receive the array of milestones
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listMilestones(options: Object, cb?: Requestable.callback): axios.Promise;
+   listMilestones(options: Object, cb?: Requestable.callback): Promise;
 
    /**
     * Get a milestone
     * @see https://developer.github.com/v3/issues/milestones/#get-a-single-milestone
     * @param {string} milestone - the id of the milestone to fetch
     * @param {Requestable.callback} [cb] - will receive the array of milestones
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getMilestone(milestone: string, cb?: Requestable.callback): axios.Promise;
+   getMilestone(milestone: string, cb?: Requestable.callback): Promise;
 
    /**
     * Create a new milestone
     * @see https://developer.github.com/v3/issues/milestones/#create-a-milestone
     * @param {Object} milestoneData - the milestone definition
     * @param {Requestable.callback} [cb] - will receive the array of milestones
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createMilestone(milestoneData: Object, cb?: Requestable.callback): axios.Promise;
+   createMilestone(milestoneData: Object, cb?: Requestable.callback): Promise;
 
    /**
     * Edit a milestone
@@ -338,27 +338,27 @@ declare class Issue {
     * @param {string} milestone - the id of the milestone to edit
     * @param {Object} milestoneData - the updates to make to the milestone
     * @param {Requestable.callback} [cb] - will receive the array of milestones
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   editMilestone(milestone: string, milestoneData: Object, cb?: Requestable.callback): axios.Promise;
+   editMilestone(milestone: string, milestoneData: Object, cb?: Requestable.callback): Promise;
 
    /**
     * Delete a milestone (this is distinct from closing a milestone)
     * @see https://developer.github.com/v3/issues/milestones/#delete-a-milestone
     * @param {string} milestone - the id of the milestone to delete
     * @param {Requestable.callback} [cb] - will receive the array of milestones
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   deleteMilestone(milestone: string, cb?: Requestable.callback): axios.Promise;
+   deleteMilestone(milestone: string, cb?: Requestable.callback): Promise;
 
    /**
     * Create a new label
     * @see https://developer.github.com/v3/issues/labels/#create-a-label
     * @param {Object} labelData - the label definition
     * @param {Requestable.callback} [cb] - will receive the object representing the label
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createLabel(labelData: Object, cb?: Requestable.callback): axios.Promise;
+   createLabel(labelData: Object, cb?: Requestable.callback): Promise;
 
 }
 
@@ -379,9 +379,9 @@ declare class Markdown {
     * @param {string} [options.mode=markdown] - can be either `markdown` or `gfm`
     * @param {string} [options.context] - repository name if mode is gfm
     * @param {Requestable.callback} [cb] - will receive the converted html
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   render(options: { text: string, mode: string, context: string }, cb?: Requestable.callback): axios.Promise;
+   render(options: { text: string, mode: string, context: string }, cb?: Requestable.callback): Promise;
 
 }
 
@@ -399,25 +399,25 @@ declare class Organization {
     * @see https://developer.github.com/v3/repos/#create
     * @param {Object} options - the repository definition
     * @param {Requestable.callback} [cb] - will receive the created repository
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createRepo(options: Object, cb?: Requestable.callback): axios.Promise;
+   createRepo(options: Object, cb?: Requestable.callback): Promise;
 
    /**
     * List the repositories in an organization
     * @see https://developer.github.com/v3/repos/#list-organization-repositories
     * @param {Requestable.callback} [cb] - will receive the list of repositories
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getRepos(cb?: Requestable.callback): axios.Promise;
+   getRepos(cb?: Requestable.callback): Promise;
 
    /**
     * Query if the user is a member or not
     * @param {string} username - the user in question
     * @param {Requestable.callback} [cb] - will receive true if the user is a member
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   isMember(username: string, cb?: Requestable.callback): axios.Promise;
+   isMember(username: string, cb?: Requestable.callback): Promise;
 
    /**
     * List the users who are members of the company
@@ -426,17 +426,17 @@ declare class Organization {
     * @param {string} [options.filter=all] - can be either `2fa_disabled` or `all`
     * @param {string} [options.role=all] - can be one of: `all`, `admin`, or `member`
     * @param {Requestable.callback} [cb] - will receive the list of users
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listMembers(options: { filter: string, role: string }, cb?: Requestable.callback): axios.Promise;
+   listMembers(options: { filter: string, role: string }, cb?: Requestable.callback): Promise;
 
    /**
     * List the Teams in the Organization
     * @see https://developer.github.com/v3/orgs/teams/#list-teams
     * @param {Requestable.callback} [cb] - will receive the list of teams
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getTeams(cb?: Requestable.callback): axios.Promise;
+   getTeams(cb?: Requestable.callback): Promise;
 
    /**
     * Create a team
@@ -448,9 +448,9 @@ declare class Organization {
     * @param {string} [options.privacy=secret] - The level of privacy the team should have. Can be either one
     * of: `secret`, or `closed`
     * @param {Requestable.callback} [cb] - will receive the created team
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createTeam(options: { name: string, description: string, repo_names: string, privacy: string }, cb?: Requestable.callback): axios.Promise;
+   createTeam(options: { name: string, description: string, repo_names: string, privacy: string }, cb?: Requestable.callback): Promise;
 
 }
 
@@ -467,9 +467,9 @@ declare class RateLimit {
     * Query the current rate limit
     * @see https://developer.github.com/v3/rate_limit/
     * @param {Requestable.callback} [cb] - will receive the rate-limit data
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getRateLimit(cb?: Requestable.callback): axios.Promise;
+   getRateLimit(cb?: Requestable.callback): Promise;
 
 }
 
@@ -489,70 +489,70 @@ declare class Repository {
     * @see https://developer.github.com/v3/git/refs/#get-a-reference
     * @param {string} ref - the reference to get
     * @param {Requestable.callback} [cb] - will receive the reference's refSpec or a list of refSpecs that match `ref`
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getRef(ref: string, cb?: Requestable.callback): axios.Promise;
+   getRef(ref: string, cb?: Requestable.callback): Promise;
 
    /**
     * Create a reference
     * @see https://developer.github.com/v3/git/refs/#create-a-reference
     * @param {Object} options - the object describing the ref
     * @param {Requestable.callback} [cb] - will receive the ref
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createRef(options: Object, cb?: Requestable.callback): axios.Promise;
+   createRef(options: Object, cb?: Requestable.callback): Promise;
 
    /**
     * Delete a reference
     * @see https://developer.github.com/v3/git/refs/#delete-a-reference
     * @param {string} ref - the name of the ref to delte
     * @param {Requestable.callback} [cb] - will receive true if the request is successful
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   deleteRef(ref: string, cb?: Requestable.callback): axios.Promise;
+   deleteRef(ref: string, cb?: Requestable.callback): Promise;
 
    /**
     * Delete a repository
     * @see https://developer.github.com/v3/repos/#delete-a-repository
     * @param {Requestable.callback} [cb] - will receive true if the request is successful
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   deleteRepo(cb?: Requestable.callback): axios.Promise;
+   deleteRepo(cb?: Requestable.callback): Promise;
 
    /**
     * List the tags on a repository
     * @see https://developer.github.com/v3/repos/#list-tags
     * @param {Requestable.callback} [cb] - will receive the tag data
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listTags(cb?: Requestable.callback): axios.Promise;
+   listTags(cb?: Requestable.callback): Promise;
 
    /**
     * List the open pull requests on the repository
     * @see https://developer.github.com/v3/pulls/#list-pull-requests
     * @param {Object} options - options to filter the search
     * @param {Requestable.callback} [cb] - will receive the list of PRs
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listPullRequests(options: Object, cb?: Requestable.callback): axios.Promise;
+   listPullRequests(options: Object, cb?: Requestable.callback): Promise;
 
    /**
     * Get information about a specific pull request
     * @see https://developer.github.com/v3/pulls/#get-a-single-pull-request
     * @param {number} number - the PR you wish to fetch
     * @param {Requestable.callback} [cb] - will receive the PR from the API
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getPullRequest(number: number, cb?: Requestable.callback): axios.Promise;
+   getPullRequest(number: number, cb?: Requestable.callback): Promise;
 
    /**
     * List the files of a specific pull request
     * @see https://developer.github.com/v3/pulls/#list-pull-requests-files
     * @param {number|string} number - the PR you wish to fetch
     * @param {Requestable.callback} [cb] - will receive the list of files from the API
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listPullRequestFiles(number: (number|string), cb?: Requestable.callback): axios.Promise;
+   listPullRequestFiles(number: (number|string), cb?: Requestable.callback): Promise;
 
    /**
     * Compare two branches/commits/repositories
@@ -560,44 +560,44 @@ declare class Repository {
     * @param {string} base - the base commit
     * @param {string} head - the head commit
     * @param {Requestable.callback} cb - will receive the comparison
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   compareBranches(base: string, head: string, cb: Requestable.callback): axios.Promise;
+   compareBranches(base: string, head: string, cb: Requestable.callback): Promise;
 
    /**
     * List all the branches for the repository
     * @see https://developer.github.com/v3/repos/#list-branches
     * @param {Requestable.callback} cb - will receive the list of branches
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listBranches(cb: Requestable.callback): axios.Promise;
+   listBranches(cb: Requestable.callback): Promise;
 
    /**
     * Get a raw blob from the repository
     * @see https://developer.github.com/v3/git/blobs/#get-a-blob
     * @param {string} sha - the sha of the blob to fetch
     * @param {Requestable.callback} cb - will receive the blob from the API
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getBlob(sha: string, cb: Requestable.callback): axios.Promise;
+   getBlob(sha: string, cb: Requestable.callback): Promise;
 
    /**
     * Get a single branch
     * @see https://developer.github.com/v3/repos/branches/#get-branch
     * @param {string} branch - the name of the branch to fetch
     * @param {Requestable.callback} cb - will receive the branch from the API
-    * @returns {axios.Promise} - the promise for the http request
+    * @returns {Promise} - the promise for the http request
     */
-   getBranch(branch: string, cb: Requestable.callback): axios.Promise;
+   getBranch(branch: string, cb: Requestable.callback): Promise;
 
    /**
     * Get a commit from the repository
     * @see https://developer.github.com/v3/repos/commits/#get-a-single-commit
     * @param {string} sha - the sha for the commit to fetch
     * @param {Requestable.callback} cb - will receive the commit data
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getCommit(sha: string, cb: Requestable.callback): axios.Promise;
+   getCommit(sha: string, cb: Requestable.callback): Promise;
 
    /**
     * List the commits on a repository, optionally filtering by path, author or time range
@@ -609,18 +609,18 @@ declare class Repository {
     * @param {(Date|string)} [options.since] - only commits after this date will be returned
     * @param {(Date|string)} [options.until] - only commits before this date will be returned
     * @param {Requestable.callback} cb - will receive the list of commits found matching the criteria
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listCommits(options?: { sha: string, path: string, author: string, since: (Date|string), until: (Date|string) }, cb?: Requestable.callback): axios.Promise;
+   listCommits(options?: { sha: string, path: string, author: string, since: (Date|string), until: (Date|string) }, cb?: Requestable.callback): Promise;
 
    /**
     * Gets a single commit information for a repository
     * @see https://developer.github.com/v3/repos/commits/#get-a-single-commit
     * @param {string} ref - the reference for the commit-ish
     * @param {Requestable.callback} cb - will receive the commit information
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getSingleCommit(ref: string, cb: Requestable.callback): axios.Promise;
+   getSingleCommit(ref: string, cb: Requestable.callback): Promise;
 
    /**
     * Get tha sha for a particular object in the repository. This is a convenience function
@@ -628,36 +628,36 @@ declare class Repository {
     * @param {string} [branch] - the branch to look in, or the repository's default branch if omitted
     * @param {string} path - the path of the file or directory
     * @param {Requestable.callback} cb - will receive a description of the requested object, including a `SHA` property
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getSha(branch?: string, path?: string, cb?: Requestable.callback): axios.Promise;
+   getSha(branch?: string, path?: string, cb?: Requestable.callback): Promise;
 
    /**
     * List the commit statuses for a particular sha, branch, or tag
     * @see https://developer.github.com/v3/repos/statuses/#list-statuses-for-a-specific-ref
     * @param {string} sha - the sha, branch, or tag to get statuses for
     * @param {Requestable.callback} cb - will receive the list of statuses
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listStatuses(sha: string, cb: Requestable.callback): axios.Promise;
+   listStatuses(sha: string, cb: Requestable.callback): Promise;
 
    /**
     * Get a description of a git tree
     * @see https://developer.github.com/v3/git/trees/#get-a-tree
     * @param {string} treeSHA - the SHA of the tree to fetch
     * @param {Requestable.callback} cb - will receive the callback data
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getTree(treeSHA: string, cb: Requestable.callback): axios.Promise;
+   getTree(treeSHA: string, cb: Requestable.callback): Promise;
 
    /**
     * Create a blob
     * @see https://developer.github.com/v3/git/blobs/#create-a-blob
     * @param {string|Buffer|Blob} content - the content to add to the repository
     * @param {Requestable.callback} cb - will receive the details of the created blob
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createBlob(content: (string|Buffer|Blob), cb: Requestable.callback): axios.Promise;
+   createBlob(content: (string|Buffer|Blob), cb: Requestable.callback): Promise;
 
    /**
     * Get the object that represents the provided content
@@ -673,10 +673,10 @@ declare class Repository {
     * @param {string} path - the path for the new file
     * @param {string} blobSHA - the SHA for the blob to put at `path`
     * @param {Requestable.callback} cb - will receive the new tree that is created
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     * @deprecated use {@link Repository#createTree} instead
     */
-   updateTree(baseTreeSHA: string, path: string, blobSHA: string, cb: Requestable.callback): axios.Promise;
+   updateTree(baseTreeSHA: string, path: string, blobSHA: string, cb: Requestable.callback): Promise;
 
    /**
     * Create a new tree in git
@@ -684,9 +684,9 @@ declare class Repository {
     * @param {Object} tree - the tree to create
     * @param {string} baseSHA - the root sha of the tree
     * @param {Requestable.callback} cb - will receive the new tree that is created
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createTree(tree: Object, baseSHA: string, cb: Requestable.callback): axios.Promise;
+   createTree(tree: Object, baseSHA: string, cb: Requestable.callback): Promise;
 
    /**
     * Add a commit to the repository
@@ -695,9 +695,9 @@ declare class Repository {
     * @param {string} tree - the SHA of the tree for this commit
     * @param {string} message - the commit message
     * @param {Requestable.callback} cb - will receive the commit that is created
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   commit(parent: string, tree: string, message: string, cb: Requestable.callback): axios.Promise;
+   commit(parent: string, tree: string, message: string, cb: Requestable.callback): Promise;
 
    /**
     * Update a ref
@@ -706,43 +706,43 @@ declare class Repository {
     * @param {string} commitSHA - the SHA to point the reference to
     * @param {boolean} force - indicates whether to force or ensure a fast-forward update
     * @param {Requestable.callback} cb - will receive the updated ref back
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   updateHead(ref: string, commitSHA: string, force: boolean, cb: Requestable.callback): axios.Promise;
+   updateHead(ref: string, commitSHA: string, force: boolean, cb: Requestable.callback): Promise;
 
    /**
     * Get information about the repository
     * @see https://developer.github.com/v3/repos/#get
     * @param {Requestable.callback} cb - will receive the information about the repository
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getDetails(cb: Requestable.callback): axios.Promise;
+   getDetails(cb: Requestable.callback): Promise;
 
    /**
     * List the contributors to the repository
     * @see https://developer.github.com/v3/repos/#list-contributors
     * @param {Requestable.callback} cb - will receive the list of contributors
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getContributors(cb: Requestable.callback): axios.Promise;
+   getContributors(cb: Requestable.callback): Promise;
 
    /**
     * List the users who are collaborators on the repository. The currently authenticated user must have
     * push access to use this method
     * @see https://developer.github.com/v3/repos/collaborators/#list-collaborators
     * @param {Requestable.callback} cb - will receive the list of collaborators
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getCollaborators(cb: Requestable.callback): axios.Promise;
+   getCollaborators(cb: Requestable.callback): Promise;
 
    /**
     * Check if a user is a collaborator on the repository
     * @see https://developer.github.com/v3/repos/collaborators/#check-if-a-user-is-a-collaborator
     * @param {string} username - the user to check
     * @param {Requestable.callback} cb - will receive true if the user is a collaborator and false if they are not
-    * @return {axios.Promise} - the promise for the http request {Boolean} [description]
+    * @return {Promise} - the promise for the http request {Boolean} [description]
     */
-   isCollaborator(username: string, cb: Requestable.callback): axios.Promise;
+   isCollaborator(username: string, cb: Requestable.callback): Promise;
 
    /**
     * Get the contents of a repository
@@ -751,9 +751,9 @@ declare class Repository {
     * @param {string} path - the path containing the content to fetch
     * @param {boolean} raw - `true` if the results should be returned raw instead of GitHub's normalized format
     * @param {Requestable.callback} cb - will receive the fetched data
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getContents(ref: string, path: string, raw: boolean, cb: Requestable.callback): axios.Promise;
+   getContents(ref: string, path: string, raw: boolean, cb: Requestable.callback): Promise;
 
    /**
     * Get the README of a repository
@@ -761,43 +761,43 @@ declare class Repository {
     * @param {string} ref - the ref to check
     * @param {boolean} raw - `true` if the results should be returned raw instead of GitHub's normalized format
     * @param {Requestable.callback} cb - will receive the fetched data
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getReadme(ref: string, raw: boolean, cb: Requestable.callback): axios.Promise;
+   getReadme(ref: string, raw: boolean, cb: Requestable.callback): Promise;
 
    /**
     * Fork a repository
     * @see https://developer.github.com/v3/repos/forks/#create-a-fork
     * @param {Requestable.callback} cb - will receive the information about the newly created fork
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   fork(cb: Requestable.callback): axios.Promise;
+   fork(cb: Requestable.callback): Promise;
 
    /**
     * List a repository's forks
     * @see https://developer.github.com/v3/repos/forks/#list-forks
     * @param {Requestable.callback} cb - will receive the list of repositories forked from this one
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listForks(cb: Requestable.callback): axios.Promise;
+   listForks(cb: Requestable.callback): Promise;
 
    /**
     * Create a new branch from an existing branch.
     * @param {string} [oldBranch=master] - the name of the existing branch
     * @param {string} newBranch - the name of the new branch
     * @param {Requestable.callback} cb - will receive the commit data for the head of the new branch
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createBranch(oldBranch?: string, newBranch?: string, cb?: Requestable.callback): axios.Promise;
+   createBranch(oldBranch?: string, newBranch?: string, cb?: Requestable.callback): Promise;
 
    /**
     * Create a new pull request
     * @see https://developer.github.com/v3/pulls/#create-a-pull-request
     * @param {Object} options - the pull request description
     * @param {Requestable.callback} cb - will receive the new pull request
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createPullRequest(options: Object, cb: Requestable.callback): axios.Promise;
+   createPullRequest(options: Object, cb: Requestable.callback): Promise;
 
    /**
     * Update a pull request
@@ -806,9 +806,9 @@ declare class Repository {
     * @param {number|string} number - the number of the pull request to update
     * @param {Object} options - the pull request description
     * @param {Requestable.callback} [cb] - will receive the pull request information
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   updatePullRequst(number: (number|string), options: Object, cb?: Requestable.callback): axios.Promise;
+   updatePullRequst(number: (number|string), options: Object, cb?: Requestable.callback): Promise;
 
    /**
     * Update a pull request
@@ -816,35 +816,35 @@ declare class Repository {
     * @param {number|string} number - the number of the pull request to update
     * @param {Object} options - the pull request description
     * @param {Requestable.callback} [cb] - will receive the pull request information
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   updatePullRequest(number: (number|string), options: Object, cb?: Requestable.callback): axios.Promise;
+   updatePullRequest(number: (number|string), options: Object, cb?: Requestable.callback): Promise;
 
    /**
     * List the hooks for the repository
     * @see https://developer.github.com/v3/repos/hooks/#list-hooks
     * @param {Requestable.callback} cb - will receive the list of hooks
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listHooks(cb: Requestable.callback): axios.Promise;
+   listHooks(cb: Requestable.callback): Promise;
 
    /**
     * Get a hook for the repository
     * @see https://developer.github.com/v3/repos/hooks/#get-single-hook
     * @param {number} id - the id of the webook
     * @param {Requestable.callback} cb - will receive the details of the webook
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getHook(id: number, cb: Requestable.callback): axios.Promise;
+   getHook(id: number, cb: Requestable.callback): Promise;
 
    /**
     * Add a new hook to the repository
     * @see https://developer.github.com/v3/repos/hooks/#create-a-hook
     * @param {Object} options - the configuration describing the new hook
     * @param {Requestable.callback} cb - will receive the new webhook
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createHook(options: Object, cb: Requestable.callback): axios.Promise;
+   createHook(options: Object, cb: Requestable.callback): Promise;
 
    /**
     * Edit an existing webhook
@@ -852,53 +852,53 @@ declare class Repository {
     * @param {number} id - the id of the webhook
     * @param {Object} options - the new description of the webhook
     * @param {Requestable.callback} cb - will receive the updated webhook
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   updateHook(id: number, options: Object, cb: Requestable.callback): axios.Promise;
+   updateHook(id: number, options: Object, cb: Requestable.callback): Promise;
 
    /**
     * Delete a webhook
     * @see https://developer.github.com/v3/repos/hooks/#delete-a-hook
     * @param {number} id - the id of the webhook to be deleted
     * @param {Requestable.callback} cb - will receive true if the call is successful
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   deleteHook(id: number, cb: Requestable.callback): axios.Promise;
+   deleteHook(id: number, cb: Requestable.callback): Promise;
 
    /**
     * List the deploy keys for the repository
     * @see https://developer.github.com/v3/repos/keys/#list-deploy-keys
     * @param {Requestable.callback} cb - will receive the list of deploy keys
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listKeys(cb: Requestable.callback): axios.Promise;
+   listKeys(cb: Requestable.callback): Promise;
 
    /**
     * Get a deploy key for the repository
     * @see https://developer.github.com/v3/repos/keys/#get-a-deploy-key
     * @param {number} id - the id of the deploy key
     * @param {Requestable.callback} cb - will receive the details of the deploy key
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getKey(id: number, cb: Requestable.callback): axios.Promise;
+   getKey(id: number, cb: Requestable.callback): Promise;
 
    /**
     * Add a new deploy key to the repository
     * @see https://developer.github.com/v3/repos/keys/#add-a-new-deploy-key
     * @param {Object} options - the configuration describing the new deploy key
     * @param {Requestable.callback} cb - will receive the new deploy key
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createKey(options: Object, cb: Requestable.callback): axios.Promise;
+   createKey(options: Object, cb: Requestable.callback): Promise;
 
    /**
     * Delete a deploy key
     * @see https://developer.github.com/v3/repos/keys/#remove-a-deploy-key
     * @param {number} id - the id of the deploy key to be deleted
     * @param {Requestable.callback} cb - will receive true if the call is successful
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   deleteKey(id: number, cb: Requestable.callback): axios.Promise;
+   deleteKey(id: number, cb: Requestable.callback): Promise;
 
    /**
     * Delete a file from a branch
@@ -906,9 +906,9 @@ declare class Repository {
     * @param {string} branch - the branch to delete from, or the default branch if not specified
     * @param {string} path - the path of the file to remove
     * @param {Requestable.callback} cb - will receive the commit in which the delete occurred
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   deleteFile(branch: string, path: string, cb: Requestable.callback): axios.Promise;
+   deleteFile(branch: string, path: string, cb: Requestable.callback): Promise;
 
    /**
     * Change all references in a repo from oldPath to new_path
@@ -916,9 +916,9 @@ declare class Repository {
     * @param {string} oldPath - original path
     * @param {string} newPath - new reference path
     * @param {Requestable.callback} cb - will receive the commit in which the move occurred
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   move(branch: string, oldPath: string, newPath: string, cb: Requestable.callback): axios.Promise;
+   move(branch: string, oldPath: string, newPath: string, cb: Requestable.callback): Promise;
 
    /**
     * Write a file to the repository
@@ -932,43 +932,43 @@ declare class Repository {
     * @param {Object} [options.commiter] - the committer
     * @param {boolean} [options.encode] - true if the content should be base64 encoded
     * @param {Requestable.callback} cb - will receive the new commit
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   writeFile(branch: string, path: string, content: string, message: string, options?: { author: Object, commiter: Object, encode: boolean }, cb?: Requestable.callback): axios.Promise;
+   writeFile(branch: string, path: string, content: string, message: string, options?: { author: Object, commiter: Object, encode: boolean }, cb?: Requestable.callback): Promise;
 
    /**
     * Check if a repository is starred by you
     * @see https://developer.github.com/v3/activity/starring/#check-if-you-are-starring-a-repository
     * @param {Requestable.callback} cb - will receive true if the repository is starred and false if the repository
     *                                  is not starred
-    * @return {axios.Promise} - the promise for the http request {Boolean} [description]
+    * @return {Promise} - the promise for the http request {Boolean} [description]
     */
-   isStarred(cb: Requestable.callback): axios.Promise;
+   isStarred(cb: Requestable.callback): Promise;
 
    /**
     * Star a repository
     * @see https://developer.github.com/v3/activity/starring/#star-a-repository
     * @param {Requestable.callback} cb - will receive true if the repository is starred
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   star(cb: Requestable.callback): axios.Promise;
+   star(cb: Requestable.callback): Promise;
 
    /**
     * Unstar a repository
     * @see https://developer.github.com/v3/activity/starring/#unstar-a-repository
     * @param {Requestable.callback} cb - will receive true if the repository is unstarred
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   unstar(cb: Requestable.callback): axios.Promise;
+   unstar(cb: Requestable.callback): Promise;
 
    /**
     * Create a new release
     * @see https://developer.github.com/v3/repos/releases/#create-a-release
     * @param {Object} options - the description of the release
     * @param {Requestable.callback} cb - will receive the newly created release
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createRelease(options: Object, cb: Requestable.callback): axios.Promise;
+   createRelease(options: Object, cb: Requestable.callback): Promise;
 
    /**
     * Edit a release
@@ -976,35 +976,35 @@ declare class Repository {
     * @param {string} id - the id of the release
     * @param {Object} options - the description of the release
     * @param {Requestable.callback} cb - will receive the modified release
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   updateRelease(id: string, options: Object, cb: Requestable.callback): axios.Promise;
+   updateRelease(id: string, options: Object, cb: Requestable.callback): Promise;
 
    /**
     * Get information about all releases
     * @see https://developer.github.com/v3/repos/releases/#list-releases-for-a-repository
     * @param {Requestable.callback} cb - will receive the release information
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listReleases(cb: Requestable.callback): axios.Promise;
+   listReleases(cb: Requestable.callback): Promise;
 
    /**
     * Get information about a release
     * @see https://developer.github.com/v3/repos/releases/#get-a-single-release
     * @param {string} id - the id of the release
     * @param {Requestable.callback} cb - will receive the release information
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getRelease(id: string, cb: Requestable.callback): axios.Promise;
+   getRelease(id: string, cb: Requestable.callback): Promise;
 
    /**
     * Delete a release
     * @see https://developer.github.com/v3/repos/releases/#delete-a-release
     * @param {string} id - the release to be deleted
     * @param {Requestable.callback} cb - will receive true if the operation is successful
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   deleteRelease(id: string, cb: Requestable.callback): axios.Promise;
+   deleteRelease(id: string, cb: Requestable.callback): Promise;
 
    /**
     * Merge a pull request
@@ -1012,9 +1012,9 @@ declare class Repository {
     * @param {number|string} number - the number of the pull request to merge
     * @param {Object} options - the merge options for the pull request
     * @param {Requestable.callback} [cb] - will receive the merge information if the operation is successful
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   mergePullRequest(number: (number|string), options: Object, cb?: Requestable.callback): axios.Promise;
+   mergePullRequest(number: (number|string), options: Object, cb?: Requestable.callback): Promise;
 
 }
 
@@ -1106,9 +1106,9 @@ declare class Requestable {
     * @param {Requestable.callback} [cb] - the callback for the request
     * @param {boolean} [raw=false] - if the request should be sent as raw. If this is a falsy value then the
     *                              request will be made as JSON
-    * @return {axios.Promise} - the Promise for the http request
+    * @return {Promise} - the Promise for the http request
     */
-   _request(method: string, path: string, data?: any, cb?: Requestable.callback, raw?: boolean): axios.Promise;
+   _request(method: string, path: string, data?: any, cb?: Requestable.callback, raw?: boolean): Promise;
 
    /**
     * Make a request to an endpoint the returns 204 when true and 404 when false
@@ -1116,9 +1116,9 @@ declare class Requestable {
     * @param {Object} data - any query parameters for the request
     * @param {Requestable.callback} cb - the callback that will receive `true` or `false`
     * @param {method} [method=GET] - HTTP Method to use
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   _request204or404(path: string, data: Object, cb: Requestable.callback, method?: string): axios.Promise;
+   _request204or404(path: string, data: Object, cb: Requestable.callback, method?: string): Promise;
 
    /**
     * Make a request and fetch all the available data. Github will paginate responses so for queries
@@ -1127,10 +1127,10 @@ declare class Requestable {
     * @param {Object} options - the query parameters to include
     * @param {Requestable.callback} [cb] - the function to receive the data. The returned data will always be an array.
     * @param [_results] - the partial results. This argument is intended for interal use only.
-    * @return {axios.Promise} - a promise which will resolve when all pages have been fetched
+    * @return {Promise} - a promise which will resolve when all pages have been fetched
     * @deprecated This will be folded into {@link Requestable#_request} in the 2.0 release.
     */
-   _requestAllPages(path: string, options: Object, cb?: Requestable.callback, results?: any): axios.Promise;
+   _requestAllPages(path: string, options: Object, cb?: Requestable.callback, results?: any): Promise;
 
 }
 
@@ -1168,45 +1168,45 @@ declare class Search extends Requestable {
     * @param {string} path - the scope of the search
     * @param {Search.Params} [withOptions] - additional parameters for the search
     * @param {Requestable.callback} [cb] - will receive the results of the search
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   private _search(path: string, withOptions?: Search.Params, cb?: Requestable.callback): axios.Promise;
+   private _search(path: string, withOptions?: Search.Params, cb?: Requestable.callback): Promise;
 
    /**
     * Search for repositories
     * @see https://developer.github.com/v3/search/#search-repositories
     * @param {Search.Params} [options] - additional parameters for the search
     * @param {Requestable.callback} [cb] - will receive the results of the search
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   forRepositories(options?: Search.Params, cb?: Requestable.callback): axios.Promise;
+   forRepositories(options?: Search.Params, cb?: Requestable.callback): Promise;
 
    /**
     * Search for code
     * @see https://developer.github.com/v3/search/#search-code
     * @param {Search.Params} [options] - additional parameters for the search
     * @param {Requestable.callback} [cb] - will receive the results of the search
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   forCode(options?: Search.Params, cb?: Requestable.callback): axios.Promise;
+   forCode(options?: Search.Params, cb?: Requestable.callback): Promise;
 
    /**
     * Search for issues
     * @see https://developer.github.com/v3/search/#search-issues
     * @param {Search.Params} [options] - additional parameters for the search
     * @param {Requestable.callback} [cb] - will receive the results of the search
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   forIssues(options?: Search.Params, cb?: Requestable.callback): axios.Promise;
+   forIssues(options?: Search.Params, cb?: Requestable.callback): Promise;
 
    /**
     * Search for users
     * @see https://developer.github.com/v3/search/#search-users
     * @param {Search.Params} [options] - additional parameters for the search
     * @param {Requestable.callback} [cb] - will receive the results of the search
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   forUsers(options?: Search.Params, cb?: Requestable.callback): axios.Promise;
+   forUsers(options?: Search.Params, cb?: Requestable.callback): Promise;
 
 }
 
@@ -1223,17 +1223,17 @@ declare class Team {
     * Get Team information
     * @see https://developer.github.com/v3/orgs/teams/#get-team
     * @param {Requestable.callback} [cb] - will receive the team
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getTeam(cb?: Requestable.callback): axios.Promise;
+   getTeam(cb?: Requestable.callback): Promise;
 
    /**
     * List the Team's repositories
     * @see https://developer.github.com/v3/orgs/teams/#list-team-repos
     * @param {Requestable.callback} [cb] - will receive the list of repositories
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listRepos(cb?: Requestable.callback): axios.Promise;
+   listRepos(cb?: Requestable.callback): Promise;
 
    /**
     * Edit Team information
@@ -1245,9 +1245,9 @@ declare class Team {
     * @param {string} [options.privacy=secret] - The level of privacy the team should have. Can be either one
     * of: `secret`, or `closed`
     * @param {Requestable.callback} [cb] - will receive the updated team
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   editTeam(options: { name: string, description: string, repo_names: string, privacy: string }, cb?: Requestable.callback): axios.Promise;
+   editTeam(options: { name: string, description: string, repo_names: string, privacy: string }, cb?: Requestable.callback): Promise;
 
    /**
     * List the users who are members of the Team
@@ -1255,18 +1255,18 @@ declare class Team {
     * @param {object} options - Parameters for listing team users
     * @param {string} [options.role=all] - can be one of: `all`, `maintainer`, or `member`
     * @param {Requestable.callback} [cb] - will receive the list of users
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listMembers(options: { role: string }, cb?: Requestable.callback): axios.Promise;
+   listMembers(options: { role: string }, cb?: Requestable.callback): Promise;
 
    /**
     * Get Team membership status for a user
     * @see https://developer.github.com/v3/orgs/teams/#get-team-membership
     * @param {string} username - can be one of: `all`, `maintainer`, or `member`
     * @param {Requestable.callback} [cb] - will receive the membership status of a user
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getMembership(username: string, cb?: Requestable.callback): axios.Promise;
+   getMembership(username: string, cb?: Requestable.callback): Promise;
 
    /**
     * Add a member to the Team
@@ -1276,9 +1276,9 @@ declare class Team {
     * @param {string} [options.role=member] - The role that this user should have in the team. Can be one
     * of: `member`, or `maintainer`
     * @param {Requestable.callback} [cb] - will receive the membership status of added user
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   addMembership(username: string, options: { role: string }, cb?: Requestable.callback): axios.Promise;
+   addMembership(username: string, options: { role: string }, cb?: Requestable.callback): Promise;
 
    /**
     * Get repo management status for team
@@ -1286,9 +1286,9 @@ declare class Team {
     * @param {string} owner - Organization name
     * @param {string} repo - Repo name
     * @param {Requestable.callback} [cb] - will receive the membership status of added user
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   isManagedRepo(owner: string, repo: string, cb?: Requestable.callback): axios.Promise;
+   isManagedRepo(owner: string, repo: string, cb?: Requestable.callback): Promise;
 
    /**
     * Add or Update repo management status for team
@@ -1299,9 +1299,9 @@ declare class Team {
     * @param {string} [options.permission] - The permission to grant the team on this repository. Can be one
     * of: `pull`, `push`, or `admin`
     * @param {Requestable.callback} [cb] - will receive the membership status of added user
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   manageRepo(owner: string, repo: string, options: { permission: string }, cb?: Requestable.callback): axios.Promise;
+   manageRepo(owner: string, repo: string, options: { permission: string }, cb?: Requestable.callback): Promise;
 
    /**
     * Remove repo management status for team
@@ -1309,17 +1309,17 @@ declare class Team {
     * @param {string} owner - Organization name
     * @param {string} repo - Repo name
     * @param {Requestable.callback} [cb] - will receive the membership status of added user
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   unmanageRepo(owner: string, repo: string, cb?: Requestable.callback): axios.Promise;
+   unmanageRepo(owner: string, repo: string, cb?: Requestable.callback): Promise;
 
    /**
     * Delete Team
     * @see https://developer.github.com/v3/orgs/teams/#delete-team
     * @param {Requestable.callback} [cb] - will receive the list of repositories
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   deleteTeam(cb?: Requestable.callback): axios.Promise;
+   deleteTeam(cb?: Requestable.callback): Promise;
 
 }
 
@@ -1345,76 +1345,76 @@ declare class User {
     * @see https://developer.github.com/v3/repos/#list-user-repositories
     * @param {Object} [options={}] - any options to refine the search
     * @param {Requestable.callback} [cb] - will receive the list of repositories
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listRepos(options?: Object, cb?: Requestable.callback): axios.Promise;
+   listRepos(options?: Object, cb?: Requestable.callback): Promise;
 
    /**
     * List the orgs that the user belongs to
     * @see https://developer.github.com/v3/orgs/#list-user-organizations
     * @param {Requestable.callback} [cb] - will receive the list of organizations
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listOrgs(cb?: Requestable.callback): axios.Promise;
+   listOrgs(cb?: Requestable.callback): Promise;
 
    /**
     * List the user's gists
     * @see https://developer.github.com/v3/gists/#list-a-users-gists
     * @param {Requestable.callback} [cb] - will receive the list of gists
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listGists(cb?: Requestable.callback): axios.Promise;
+   listGists(cb?: Requestable.callback): Promise;
 
    /**
     * List the user's notifications
     * @see https://developer.github.com/v3/activity/notifications/#list-your-notifications
     * @param {Object} [options={}] - any options to refine the search
     * @param {Requestable.callback} [cb] - will receive the list of repositories
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listNotifications(options?: Object, cb?: Requestable.callback): axios.Promise;
+   listNotifications(options?: Object, cb?: Requestable.callback): Promise;
 
    /**
     * Show the user's profile
     * @see https://developer.github.com/v3/users/#get-a-single-user
     * @param {Requestable.callback} [cb] - will receive the user's information
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   getProfile(cb?: Requestable.callback): axios.Promise;
+   getProfile(cb?: Requestable.callback): Promise;
 
    /**
     * Gets the list of starred repositories for the user
     * @see https://developer.github.com/v3/activity/starring/#list-repositories-being-starred
     * @param {Requestable.callback} [cb] - will receive the list of starred repositories
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   listStarredRepos(cb?: Requestable.callback): axios.Promise;
+   listStarredRepos(cb?: Requestable.callback): Promise;
 
    /**
     * Have the authenticated user follow this user
     * @see https://developer.github.com/v3/users/followers/#follow-a-user
     * @param {string} username - the user to follow
     * @param {Requestable.callback} [cb] - will receive true if the request succeeds
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   follow(username: string, cb?: Requestable.callback): axios.Promise;
+   follow(username: string, cb?: Requestable.callback): Promise;
 
    /**
     * Have the currently authenticated user unfollow this user
     * @see https://developer.github.com/v3/users/followers/#follow-a-user
     * @param {string} username - the user to unfollow
     * @param {Requestable.callback} [cb] - receives true if the request succeeds
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   unfollow(username: string, cb?: Requestable.callback): axios.Promise;
+   unfollow(username: string, cb?: Requestable.callback): Promise;
 
    /**
     * Create a new repository for the currently authenticated user
     * @see https://developer.github.com/v3/repos/#create
     * @param {object} options - the repository definition
     * @param {Requestable.callback} [cb] - will receive the API response
-    * @return {axios.Promise} - the promise for the http request
+    * @return {Promise} - the promise for the http request
     */
-   createRepo(options: Object, cb?: Requestable.callback): axios.Promise;
+   createRepo(options: Object, cb?: Requestable.callback): Promise;
 
 }
